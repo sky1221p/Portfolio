@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Akash's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, rgba(0, 0, 32, 1) 0%, rgba(39, 39, 82, 1) 100%);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 65px;
+            background-color: rgb(39, 39, 82);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease, font-size 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: rgb(136, 136, 241);
+            font-size: 1.04rem;
+            transform: translateY(-2px);
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        main {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(136, 136, 241);
+        }
+
+        .projects-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: rgb(39, 39, 82);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card h3 {
+            color: #9c97f1;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #9c97f1;
+            text-decoration: none;
+            border: 1px solid #9c97f1;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #9c97f1;
+            color: rgb(39, 39, 82);
+        }
+
+        footer {
+            background-color: rgb(39, 39, 82);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-icons {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-icons li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons li a:hover {
+            color: rgb(136, 136, 241);
+        }
+
+        @media (max-width: 1024px) {
+            main {
+                padding: 40px 5%;
+            }
+
+            .projects-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .projects-section {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 30px 5%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .project-card h3 {
+                font-size: 1.4rem;
+            }
+
+            footer {
+                padding: 15px;
+            }
+
+            .social-icons li a {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .left {
+                font-size: 1.2rem;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .project-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .project-card p {
+                font-size: 1rem;
+            }
+
+            footer {
+                padding: 10px;
+            }
+
+            .social-icons li a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Akash's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="home.html" target="_self">Home</a></li>
+                    <li><a href="about.html" target="_self">About</a></li>
+                    <li><a href="projects.html" target="_self">Projects</a></li>
+                    <li><a href="contact.html" target="_self">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Projects</h1>
+        <p>There is also my upcoming projects are mentioned.</p>
+
+        <section class="projects-section">
+            <div class="project-card">
+                <h3>Project 1: E-commerce Website</h3>
+                <p>
+                    An e-commerce platform developed using HTML, CSS, JavaScript, and a backend with Python. It features
+                    a responsive design, user authentication, and a shopping cart system.
+                </p>
+                <a href="https://github.com/yourprofile/e-commerce" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 2: Chat Application</h3>
+                <p>
+                    A real-time chat application built with Node.js, Express, and Socket.io. This project allows users
+                    to communicate instantly through web sockets and has a clean UI.
+                </p>
+                <a href="https://github.com/yourprofile/chat-app" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 3: Portfolio Website</h3>
+                <p>
+                    A personal portfolio website (this one!) built using HTML, CSS, and JavaScript to showcase my skills
+                    and projects. It is fully responsive and easy to navigate.
+                </p>
+                <a href="https://github.com/yourprofile/portfolio" target="_blank">View Project</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="social-icons">
+            <li><a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
